@@ -10,7 +10,7 @@ base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def download_file(url, save_path):
     try:
         print(f"Begin downloading: {url}")
-        response = requests.get(url, stream=True)
+        response = requests.get(url, stream=True, timeout=60)
         response.raise_for_status()  # 检查请求是否成功
 
         # 获取文件总大小
