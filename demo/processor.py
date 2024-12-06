@@ -61,9 +61,10 @@ class IDPhotoProcessor:
         contrast_strength=0,
         sharpen_strength=0,
         saturation_strength=0,
-        plugin_option=[],
+        plugin_option=None,
         print_switch=None,
     ):        
+        plugin_option = [] if plugin_option is None else plugin_option
         # 初始化参数
         top_distance_min = top_distance_max - 0.02
         # 得到render_option在LOCALES["render_mode"][language]["choices"]中的索引
