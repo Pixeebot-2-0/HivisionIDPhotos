@@ -102,7 +102,7 @@ def detect_face_face_plusplus(ctx: Context):
     }
 
     # 发送 POST 请求
-    response = requests.post(url, files=files)
+    response = requests.post(url, files=files, timeout=60)
 
     # 获取响应状态码
     status_code = response.status_code
